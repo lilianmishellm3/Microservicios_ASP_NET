@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,46 +6,54 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TiendaServicios.Api.Autor.Aplicacion;
+using TiendaServicios.Api.Autor.Modelo;
 
 namespace TiendaServicios.Api.Autor.Controllers
 {
-    [ApiController]
+    
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    [ApiController]
+    public class AutorController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+       
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IMediator _mediator;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public AutorController(IMediator mediator)
         {
-            _logger = logger;
+            _mediator = mediator;
         }
+
+
+
+        [HttpPost]
+        public async Task<ActionResult<Unit>> AddAutor(Nuevo.Ejecuta data)
+        {
+            return await _mediator.Send(data);
+        }
+
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<List<AutorDto>> GetAutors()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return await _mediator.Send(new Consulta.ListaAutor());
+        }
+
+
+
+       [HttpGet("{id}")]
+
+
+       public async Task<AutorDto> GetAutorByGuid(string id)
+        {
+            return await _mediator.Send(new ConsultaFiltro.AutorUnico { AutorGuid = id});
+
         }
     }
+     
 
 
-
-    [HttpPost]
-    public async Task<ActionResult<Unit>> Crear(Nuevo.Ejecuta data)
-    {
-        return await _mediator.Send(data);
-    }
+  
 
 
 
