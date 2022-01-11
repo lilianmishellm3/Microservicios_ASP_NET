@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.810.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios1", "TiendaServicios1\TiendaServicios1.csproj", "{C615EA69-BEB0-45F7-8101-FA9EFE295291}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.Autor", "TiendaServicios.Api.Autor\TiendaServicios.Api.Autor.csproj", "{077CBC4F-4501-45A7-BBB2-A5DAE11A0871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.Libro", "TiendaServicios.Api.Libro\TiendaServicios.Api.Libro.csproj", "{DA78BD92-2223-4A35-AA56-F6717ABF9A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.CarritoCompra", "TiendaServicios.Api.CarritoCompra\TiendaServicios.Api.CarritoCompra.csproj", "{6692F35F-0511-4C3B-98BC-61D557B61E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.Libros.Tests", "TiendaServicios.Api.Libros.Tests\TiendaServicios.Api.Libros.Tests.csproj", "{2756B261-9127-4220-9A0E-35C01BAAC076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -15,6 +23,22 @@ Global
 		{C615EA69-BEB0-45F7-8101-FA9EFE295291}.Debug|anycpu.Build.0 = Debug|anycpu
 		{C615EA69-BEB0-45F7-8101-FA9EFE295291}.Release|anycpu.ActiveCfg = Release|anycpu
 		{C615EA69-BEB0-45F7-8101-FA9EFE295291}.Release|anycpu.Build.0 = Release|anycpu
+		{077CBC4F-4501-45A7-BBB2-A5DAE11A0871}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{077CBC4F-4501-45A7-BBB2-A5DAE11A0871}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{077CBC4F-4501-45A7-BBB2-A5DAE11A0871}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{077CBC4F-4501-45A7-BBB2-A5DAE11A0871}.Release|anycpu.Build.0 = Release|Any CPU
+		{DA78BD92-2223-4A35-AA56-F6717ABF9A21}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{DA78BD92-2223-4A35-AA56-F6717ABF9A21}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{DA78BD92-2223-4A35-AA56-F6717ABF9A21}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{DA78BD92-2223-4A35-AA56-F6717ABF9A21}.Release|anycpu.Build.0 = Release|Any CPU
+		{6692F35F-0511-4C3B-98BC-61D557B61E01}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{6692F35F-0511-4C3B-98BC-61D557B61E01}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{6692F35F-0511-4C3B-98BC-61D557B61E01}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{6692F35F-0511-4C3B-98BC-61D557B61E01}.Release|anycpu.Build.0 = Release|Any CPU
+		{2756B261-9127-4220-9A0E-35C01BAAC076}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{2756B261-9127-4220-9A0E-35C01BAAC076}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{2756B261-9127-4220-9A0E-35C01BAAC076}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{2756B261-9127-4220-9A0E-35C01BAAC076}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
